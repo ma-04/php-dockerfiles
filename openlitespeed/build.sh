@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-DOCKER_HUB_USERNAME="meghsh"
+DOCKER_HUB_USERNAME="flywp"
 IMAGE_NAME="openlitespeed"
 OLS_VERSION="1.8.1"
 

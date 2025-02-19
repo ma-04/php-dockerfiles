@@ -16,16 +16,16 @@ Docker images for PHP-FPM.
 
 ```bash
 # PHP 7.4
-docker image pull meghsh/php:7.4
+docker image pull flywp/php:7.4
 
 # PHP 8.1
-docker image pull meghsh/php:8.1
+docker image pull flywp/php:8.1
 
 # PHP 8.2
-docker image pull meghsh/php:8.2
+docker image pull flywp/php:8.2
 
 # PHP 8.3
-docker image pull meghsh/php:8.3
+docker image pull flywp/php:8.3
 ```
 
 ### Using the images
@@ -34,16 +34,16 @@ One-off commands
 
 ```bash
 # PHP 7.4
-docker run --rm meghsh/php:7.4 bash -c "php -v"
+docker run --rm flywp/php:7.4 bash -c "php -v"
 
 # PHP 8.0
-docker run --rm meghsh/php:8.0 bash -c "php -v"
+docker run --rm flywp/php:8.0 bash -c "php -v"
 
 # PHP 8.2
-docker run --rm meghsh/php:8.2 bash -c "php -v"
+docker run --rm flywp/php:8.2 bash -c "php -v"
 
 # PHP 8.3
-docker run --rm meghsh/php:8.3 bash -c "php -v"
+docker run --rm flywp/php:8.3 bash -c "php -v"
 ```
 
 With docker-compose:
@@ -52,7 +52,7 @@ With docker-compose:
 version: "3.5"
 services:
   php:
-    image: "meghsh/php:7.4"
+    image: "flywp/php:7.4"
     volumes:
       - "./app:/var/www/html"
 ```
@@ -63,5 +63,5 @@ Install [Container Structure Test](https://github.com/GoogleContainerTools/conta
 
 
 ```bash
-container-structure-test test --image meghsh/php:8.2 --config structure-test.yaml
+container-structure-test test --image flywp/php:8.2 --config structure-test.yaml
 ```
