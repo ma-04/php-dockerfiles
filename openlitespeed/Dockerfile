@@ -8,6 +8,13 @@ ARG OLS_VERSION=1.8.1
 ARG DEBIAN_FRONTEND=noninteractive
 ARG TARGETPLATFORM
 
+# Avoiding Libc-bin error
+RUN rm /var/lib/dpkg/info/libc-bin.*
+RUN apt-get clean
+RUN apt-get update
+RUN apt-get install libc-bin
+
+
 # Install necessary packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget curl cron less tzdata gnupg2 ca-certificates procps libatomic1 \
