@@ -11,7 +11,7 @@ on:
       - "*"
 
 env:
-  DOCKER_ORG_USERNAME: ${{ vars.DOCKER_ORG_USERNAME || 'meghsh' }}
+  DOCKER_ORG_USERNAME: ${{ vars.DOCKER_ORG_USERNAME || 'flywp' }}
 
 jobs:
   build-php:
@@ -35,7 +35,7 @@ jobs:
           file: php/Dockerfile
           context: php
           load: true
-          tags: ${{ env.DOCKER_ORG_USERNAME }}/php:${{ matrix.php_version }}
+          tags: ${{ env.DOCKER_ORG_USERNAME }}/php2:${{ matrix.php_version }}
           build-args: |
             PHP_VERSION=${{ matrix.php_version }}
 
